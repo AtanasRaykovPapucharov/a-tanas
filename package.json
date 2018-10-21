@@ -1,0 +1,48 @@
+{
+  "name": "a-tanas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtanasRaykovPapucharov/a-tanas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtanasRaykovPapucharov/a-tanas/issues"
+  },
+  "homepage": "https://github.com/AtanasRaykovPapucharov/a-tanas#readme",
+  "scripts": {
+    "coverage": "cd coverage && index.html",
+    "start": "nodemon index.js",
+    "postinstall": "cd src/app-ui && npm i",
+    "test": "nyc --reporter=html --reporter=text mocha && npm run coverage"
+  },
+  "dependencies": {
+    "koa": "^2.5.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-morgan": "^1.0.1",
+    "koa-passport": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.9.0",
+    "koa-socket-2": "^1.0.17",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.3.2",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "browserify": "^16.2.3",
+    "chai": "^4.2.0",
+    "fs-extra": "^7.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "nyc": "^13.1.0",
+    "sinon": "^7.0.0"
+  }
+}

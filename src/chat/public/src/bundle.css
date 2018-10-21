@@ -1,0 +1,73 @@
+body .wrapper .main #main-section {
+  text-align: center;
+}
+
+body .wrapper .main #main-section main {
+  display: flex;
+}
+
+body .wrapper .main #main-section #form {
+  padding: 50px;
+  min-height: 200px;
+  background-color: #a09797;
+  color: whitesmoke;
+}
+
+body .wrapper .main #main-section #users {
+  padding: 5px;
+  min-height: 200px;
+  background-color: #786464;
+  color: whitesmoke;
+  flex: 1;
+}
+
+body .wrapper .main #main-section #list {
+  flex: 2;
+  padding: 5px;
+  list-style-type: none;
+}
+
+body .wrapper .main #main-section #list li {
+  border: 1px solid palevioletred;
+  background-color: palevioletred;
+  border-radius: 10px;
+  width: 30%;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+body {
+  background-color: gainsboro;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+
+body .wrapper .header,
+body .wrapper .main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+body .wrapper .header aside,
+body .wrapper .main aside {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+body .wrapper .header section,
+body .wrapper .main section {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}

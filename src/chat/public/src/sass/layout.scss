@@ -1,0 +1,33 @@
+@import './flexbox';
+
+body {
+    background-color: gainsboro;
+    * {
+        margin: 0;
+        padding: 0;
+        border: 1px solid black;
+    }
+
+    .wrapper .header, .wrapper .main {
+        @include flexbox();
+
+        aside {
+            @include flex(1);
+        }
+        section {
+            @include flex(3);
+        }
+    }
+
+    .wrapper .header {
+        
+    }
+
+    .wrapper .main {
+       
+    }
+
+    .wrapper .footer {
+        
+    }
+}

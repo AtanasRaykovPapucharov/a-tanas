@@ -1,0 +1,24 @@
+{
+  "name": "public-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "js": "browserify src/js/main.js -o src/bundle.js",
+    "sass": "gulp sass:watch",
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1",
+    "navigo": "^7.1.2",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
