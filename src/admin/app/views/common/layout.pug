@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  include head
+
+  body
+    include header
+    main
+      #main.wrapper
+        .content.container-flex
+          #content.item-flex-5 
+            block main-content
+          #aside.item-flex-1
+            block aside
+    br
+    br
+    include footer
+    #logger
+
+    include scripts
