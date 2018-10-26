@@ -8,7 +8,7 @@ module.exports = (mongoose, connectionString, collections) => {
     db.on('error', console.error.bind(console, 'DB connection error: '))
 
     db.on('connected', () => {
-        console.log('DB connected!')
+        console.log('API DB connected!')
     })
 
     db.on('disconnected', () => {

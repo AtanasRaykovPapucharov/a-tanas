@@ -12,6 +12,6 @@ module.exports = (() => {
     require('./config/koa')(app, io, db)
 
     app.listen(env.port, () => {
-        console.log(`Server is running on port: ${env.port}`)
+        console.log(`CHAT Server is running on port: ${env.port}`)
     })
 })()

@@ -14,7 +14,7 @@ module.exports = (connectionString) => {
 			console.log("Database connection error!", err)
 			return;
 		}
-		console.log("Database connected!")
+		console.log("ADMIN Database connected!")
 	})
 
 	const mongo = {

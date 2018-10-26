@@ -1,26 +1,26 @@
 module.exports = (mongo) => {
 	function _move(method, collection, queryObj) {
-		collection = collection || "";
+		collection = collection || ""
 		if (typeof queryObj === 'string' || queryObj instanceof String) {
-			queryObj = { _id: mongo.api.ObjectId(queryObj) };
+			queryObj = { _id: mongo.api.ObjectId(queryObj) }
 		}
 
 		return new Promise((resolve, reject) => {
 			mongo.db[collection][method](queryObj, (err, obj) => {
 				if (err) {
-					reject(err);
+					reject(err)
 				}
-				resolve(obj);
+				resolve(obj)
 			})
-		});
+		})
 	}
 
 	function _modify(method, collection, queryObj, ubdateObj) {
-		collection = collection || "";
+		collection = collection || ""
 		if (typeof queryObj === 'string' || queryObj instanceof String) {
-			queryObj = { _id: mongo.api.ObjectId(queryObj) };
+			queryObj = { _id: mongo.api.ObjectId(queryObj) }
 		}
-		ubdateObj = ubdateObj || {};
+		ubdateObj = ubdateObj || {}
 
 		return new Promise((resolve, reject) => {
 			mongo.db[collection][method]({
@@ -29,27 +29,27 @@ module.exports = (mongo) => {
 				new: true
 			}, (err, obj) => {
 				if (err) {
-					reject(err);
+					reject(err)
 				}
-				resolve(obj);
+				resolve(obj)
 			})
 		});
 	}
 
 	function _update(method, collection, queryObj, ubdateObj) {
-		collection = collection || "";
+		collection = collection || ""
 		if (typeof queryObj === 'string' || queryObj instanceof String) {
-			queryObj = { _id: mongo.api.ObjectId(queryObj) };
+			queryObj = { _id: mongo.api.ObjectId(queryObj) }
 		}
 
 		return new Promise((resolve, reject) => {
 			mongo.db[collection][method](queryObj, ubdateObj, {}, (err, obj) => {
 				if (err) {
-					reject(err);
+					reject(err)
 				}
-				resolve(obj);
+				resolve(obj)
 			})
-		});
+		})
 	}
 
 	return {
@@ -69,4 +69,4 @@ module.exports = (mongo) => {
 			return _update("update", collection, queryObj, updateObj)
 		}
 	}
-};
+}

@@ -1,3 +1,3 @@
 require('./src/api/start-server')()
-require('./src/admin/start-server')()
-// require('./src/app-chat/server/koa-start')()
+require('./src/admin/startup')
+require('./src/chat/server/koa-start')

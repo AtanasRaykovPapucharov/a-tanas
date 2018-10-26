@@ -5,6 +5,7 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, '../../access.
 })
 
 const morgan = require('koa-morgan')
+const cors = require('koa-cors')
 const statics = require('koa-static')
 const session = require('koa-session')
 const passport = require('koa-passport')
@@ -16,6 +17,9 @@ module.exports = (app, router) => {
     app.use(morgan('combined', {
         stream: accessLogStream
     }))
+
+    // Cross-origin ...
+    app.use(cors())
 
     // Static Resources Middleware
     app.use(statics(path.join(__dirname, '../client')))

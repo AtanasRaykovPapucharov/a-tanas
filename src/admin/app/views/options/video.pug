@@ -1,0 +1,39 @@
+extends ../common/layout
+
+block aside
+
+block main-content
+    h1 Video
+
+block main-content
+    - var sections = ["js", "nodejs", "rxjs", "redux", "react", "angular", "vue", "koa", "hapi", "mongodb"];
+    br
+    form(action="/api/video", method="post")
+        section.form-section
+            label(for="section") Section  
+            select.field(name="section" value="js")
+                each sec in sections
+                    option(value=sec)=sec
+        br
+        section.form-section
+            label(for="title") Title  
+            input.field(type="text" name="title" required='')
+            span.move ____
+            label(for="subtitle") Subtitle  
+            input.field(type="text" name="subtitle" required='')
+        br
+        section.form-section
+            label(for="video") Video  
+            input.field(type="text" name="video" required='')
+        br
+        section.form-section
+            label(for="info") Info  
+            textarea.field(name="info" cols="60", rows="10" required='')
+        br
+        section.form-section
+            label(for="tagField") Tags  
+            input.field(type="text", name="tagField" required='')
+            span.move ____________________
+            input(type="submit" value="Send")
+
+

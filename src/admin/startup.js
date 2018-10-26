@@ -1,1 +1,1 @@
-require("./app/server").init
+module.exports = require("./app/server").init

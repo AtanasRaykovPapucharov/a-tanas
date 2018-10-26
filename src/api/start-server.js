@@ -20,5 +20,5 @@ module.exports = () => {
     require('./config/routes')(router, controller, dbCollections)
 
     const port = params.port
-    server.listen(port, () => console.log(`Server is running on port: ${port}`))
+    server.listen(port, () => console.log(`API Server is running on port: ${port}`))
 }

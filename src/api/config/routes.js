@@ -1,7 +1,7 @@
 module.exports = (router, controller, collections) => {
 
     router.get('/', async (ctx) => {
-        console.log('User connected!')
+        console.log('API User connected!')
     })
 
     collections.forEach(element => {

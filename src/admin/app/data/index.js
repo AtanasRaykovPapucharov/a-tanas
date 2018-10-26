@@ -8,6 +8,7 @@ module.exports = (mongo) => {
 
 	return {
 		blog,
-		video
+		video,
+		user
 	}
 }

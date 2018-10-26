@@ -1,6 +1,12 @@
 module.exports = (express, app, params) => {
+	const pretty = require("express-prettify")
+	app.use(pretty({
+		query: "pretty"
+	}))
 	const path = require("path")
-	
+
+	app.use("/", express.static(path.join(__dirname, "../static")))
+
 	app.set("view engine", "pug")
 	app.set("views", path.join(__dirname, "../views"))
 
@@ -28,6 +34,7 @@ module.exports = (express, app, params) => {
 	const cookieParser = require("cookie-parser")
 	app.use(cookieParser())
 
+
 	const session = require("express-session")
 	const sessionObj = {
 		secret: params.sessionSecret,
@@ -35,6 +42,4 @@ module.exports = (express, app, params) => {
 		saveUninitialized: true
 	}
 	app.use(session(sessionObj))
-
-	app.use("/", express.static(path.join(__dirname, "../static")))
 }

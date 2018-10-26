@@ -19,13 +19,16 @@
   "homepage": "https://github.com/AtanasRaykovPapucharov/a-tanas#readme",
   "scripts": {
     "coverage": "cd coverage && index.html",
+    "sass": "cd src/ui/ && npm run sass",
     "start": "nodemon index.js",
     "postinstall": "cd src/app-ui && npm i",
-    "test": "nyc --reporter=html --reporter=text mocha && npm run coverage"
+    "test": "nyc --reporter=html --reporter=text mocha && npm run coverage",
+    "ui": "cd src/ui/ && npm start"
   },
   "dependencies": {
     "koa": "^2.5.3",
     "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
     "koa-morgan": "^1.0.1",
     "koa-passport": "^4.1.1",
     "koa-router": "^7.4.0",
